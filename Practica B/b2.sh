@@ -6,5 +6,11 @@
 #Nota: evitaremos por ahora la validación de la cantidad
 #y valor de los argumentos enviados
 
-ncal $1 $2
-exit 0
+if [ $# -ne 2 ]
+then
+	echo "Cantidad erronea de argumentos. Deben ser 2."
+	exit 1
+else
+	ncal $1 $2
+	exit 0
+fi

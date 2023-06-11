@@ -1,15 +1,10 @@
 #!/bin/bash
 
-if [ $# -ne 2 ]
-then
-	echo "Cantidad erronea de argumentos. Deben ser 2."
-	exit 1
-else
+[ $# -ne 2 ] && echo "Deben ser 2 argumentos" && exit 1
 
-	VAR_MES=$1
-	VAR_ANIO=$2
+VAR_MES=$1
+VAR_ANIO=$2
+echo "$(ncal $VAR_MES $VAR_ANIO)"
 
-	echo "$(ncal $VAR_MES $VAR_ANIO)"
+exit 0
 
-	exit 0
-fi
