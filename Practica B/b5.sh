@@ -20,3 +20,9 @@ else
 	date -d "$MES/$DIA/$ANIO" > /dev/null 2>&1 && echo "Fecha válida" || echo "Fecha inválida"
 fi
 exit 0 
+
+#OPCION 2
+#read -p "Dia: " DIA && read -p "Mes: " MES && read -p "Año: " ANIO &&
+#date -d "$MES/$DIA/$ANIO" > /dev/null 2>&1 && echo "Fecha valida" 
+#|| echo "Fecha no valida"
+#exit 0
